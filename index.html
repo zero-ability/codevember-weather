@@ -12,35 +12,56 @@
 
 <body>
 
+
 <audio id="my_audio_open1" src="sounds/AlienNostromoStartup_.mp3" autostart></audio>
-
 <audio id="my_audio_open2" src="sounds/AlienConnection.mp3" autostart></audio>
-
 <audio id="my_audio1" src="sounds/AlienScroll.wav"></audio>
-
 <audio id="my_audio2" src="sounds/AlienWrite.wav"></audio>
-
 
 <!-- <source src="AlienScroll.wav" type="audio/wav"> -->
   
-<div class="screen"></div>
+<form id="delayedText">
+
+<p> Interface 2037 READY FOR INQUIRY </p>
 
 <div class="txtLine">
   <div class="show"></div>
-  <div class="hide">:PRIORITY REPORT:</div>
+  <div class="hide">WEATHER REPORT / REGION (North America)</div>
 </div>
 
 <div class="txtLine">
   <div class="show"></div>
-  <div class="hide">New York Weather Report</div>
+  <div class="hide">Select Location:</div>
 </div>
 
-<iframe width=1200 height=900 src="http://wttr.in/NewYork">
-  <p>Your browser does not support iframes.</p>
-</iframe>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
+<select id="mySelect" style=font-size:18pt name="" onchange="javascript:location.href = this.value;">
+  <option value="" selected>Select One</option>
+  <option value="http://wttr.in/new york" > New York City</option>
+  <option value="http://wttr.in/denver colorado" > Denver Coloado</option>
+  <option value="http://wttr.in/san antonio texas" > San Antonio Texas</option>
+  <option value="http://wttr.in/los angeles california" > Los Angeles California</option>
+  <option value="http://wttr.in/Philadelphia" > Philadelphia Pennsylvania</option>
+  <option value="http://wttr.in/Miami Florida" >Miami Florida</option>
+  <option value="http://wttr.in/Boston Mass" > Boston Mass</option>
+  <option value="http://wttr.in/losVegas Nevada" > Los Vegas Nevada</option>
+  <option value="http://wttr.in/Anchorage Alaska" > Anchorage Alaska</option>
+  <option Value="http://alien.digitalmerc.org" > *LV-246*??? </option>
+</select>
+
+
+</form>
+
+
+
+
+
+<p id="demo" ></p>
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="js/index.js"></script>
 
 </body>
